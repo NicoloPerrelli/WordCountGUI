@@ -87,7 +87,6 @@ public class WordCountGUI {
 		//move data from .txt file
 		Scanner sc = new Scanner(new File("\\C:\\Users\\Nicolo Perrelli\\Desktop\\poemText.txt"));
 		List<String> lines = new ArrayList<String>();
-		String[] str = lines.toArray(new String[0]);
 
 		while (sc.hasNext()) {
 			//for cleaning up edge casses
@@ -101,6 +100,8 @@ public class WordCountGUI {
 			else if (!splitIn.isEmpty()) {lines.add(splitIn);}
 			else{System.out.println("SOMETHING DIDN'T FIT");}
 		}
+		
+		String[] str = lines.toArray(new String[0]);
 
 		JFrame frame = new JFrame("Word Count GUI App");
 		JPanel panel = new JPanel();
